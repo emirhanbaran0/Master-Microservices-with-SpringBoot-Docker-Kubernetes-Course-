@@ -6,9 +6,9 @@ import com.emirhanbaran.accounts.entity.Account;
 public class AccountsMapper {
 
     public static AccountsDto mapToAccountsDto(Account account,AccountsDto accountsDto) {
-        accountsDto.setAccountNumber(accountsDto.getAccountNumber());
-        accountsDto.setAccountType(accountsDto.getAccountType());
-        accountsDto.setBranchAddress(accountsDto.getBranchAddress());
+        accountsDto.setAccountNumber(account.getAccountNumber());
+        accountsDto.setAccountType(account.getAccountType());
+        accountsDto.setBranchAddress(account.getBranchAddress());
         return accountsDto;
     }
 
