@@ -1,4 +1,4 @@
-package com.emirhanbaran.loans.config;
+package com.emirhanbaran.cards.config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -15,9 +15,9 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Loans Microservice")
+                        .title("Cards Microservice")
                         .version("1.0")
-                        .description("This is a representation ofEazyBank loans microservice REST API")
+                        .description("This is a representation ofEazyBank cards microservice REST API")
                         .termsOfService("http://swagger.io/terms/")
                         .license(new License()
                                 .name("Apache 2.0")
@@ -29,7 +29,7 @@ public class SwaggerConfig {
                                 .url("https://www.linkedin.com/in/emirhanbaran0/")
                         )
                 ).externalDocs(new ExternalDocumentation()
-                        .description("Eazy Bank loans microservice REST API Documentation")
+                        .description("Eazy Bank cards microservice REST API Documentation")
                         .url("https://www.linkedin.com/in/emirhanbaran0/")
                 );
     }
