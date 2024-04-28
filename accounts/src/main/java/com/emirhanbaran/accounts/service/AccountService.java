@@ -33,10 +33,7 @@ public class AccountService {
         if(customerRepository.findByMobileNumber(customer.getMobileNumber()).isPresent()){
             throw new CustomerAlreadyExistException("Customer already registered with given mobile number: "+customerDto.getMobileNumber());
         }
-        customer.setCreatedAt(LocalDateTime.now());
-        customer.setCreatedBy("Anonymous");
-        customer.setUpdatedAt(LocalDateTime.now());
-        customer.setUpdatedBy("Anonymous");
+
         Customer savedCustomer=customerRepository.save(customer);
         accountRepository.save(createNewAccount(savedCustomer));
     }
@@ -48,10 +45,6 @@ public class AccountService {
         account.setAccountNumber(randomAccNumber);
         account.setAccountType(AccountConstants.SAVINGS);
         account.setBranchAddress(AccountConstants.ADDRESS);
-        account.setCreatedAt(LocalDateTime.now());
-        account.setCreatedBy("Anonymous");
-        account.setUpdatedAt(LocalDateTime.now());
-        account.setUpdatedBy("Anonymous");
         return account;
     }
 
@@ -83,8 +76,6 @@ public class AccountService {
                     ()->{throw new ResourceNotFoundException("Customer","customerId",customerId.toString());}
             );
             CustomerMapper.mapToCustomer(customerDto, customer);
-            customer.setUpdatedAt(LocalDateTime.now());
-            customer.setUpdatedBy("Anonymous");
             customerRepository.save(customer);
             isUpdated = true;
         }
