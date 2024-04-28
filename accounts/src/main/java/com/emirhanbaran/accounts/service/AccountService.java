@@ -67,4 +67,27 @@ public class AccountService {
         customerDto.setAccountsDto(accountsDto);
         return customerDto;
     }
+
+    public boolean updateAccount(CustomerDto customerDto){
+        boolean isUpdated=false;
+        AccountsDto accountsDto=customerDto.getAccountsDto();
+        if(accountsDto!=null){
+            Account account=accountRepository.findById(accountsDto.getAccountNumber()).orElseThrow(
+                    ()->{throw new ResourceNotFoundException("Account","accountNumber",accountsDto.getAccountNumber().toString());}
+            );
+            AccountsMapper.mapToAccount(accountsDto,account);
+            account=accountRepository.save(account);
+
+            Long customerId=account.getCustomerId();
+            Customer customer=customerRepository.findById(customerId).orElseThrow(
+                    ()->{throw new ResourceNotFoundException("Customer","customerId",customerId.toString());}
+            );
+            CustomerMapper.mapToCustomer(customerDto, customer);
+            customer.setUpdatedAt(LocalDateTime.now());
+            customer.setUpdatedBy("Anonymous");
+            customerRepository.save(customer);
+            isUpdated = true;
+        }
+        return isUpdated;
+    }
 }
