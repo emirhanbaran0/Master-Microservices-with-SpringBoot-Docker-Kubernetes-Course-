@@ -52,6 +52,7 @@ public class AccountsController {
             @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR")
     })
     @GetMapping("/fetch")
+
     public ResponseEntity<CustomerDto> fetchAccountDetail(@RequestParam
                                                               @Pattern(regexp = "($|[0-9]{10})", message = "Mobile number must be 10 digits")
                                                               String mobileNumber) {

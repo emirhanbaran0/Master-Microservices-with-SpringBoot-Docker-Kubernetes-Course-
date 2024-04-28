@@ -1,4 +1,4 @@
-package com.emirhanbaran.accounts.config;
+package com.emirhanbaran.loans.config;
 
 import io.swagger.v3.oas.models.ExternalDocumentation;
 import io.swagger.v3.oas.models.OpenAPI;
