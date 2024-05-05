@@ -9,7 +9,7 @@ services:
         limits:
           memory: 700m
     networks:
-      -ezybank
+      - ezybank
   loans:
     image: "emirhanbaran/loans:s4"
     container_name: loans-ms
@@ -20,7 +20,7 @@ services:
         limits:
           memory: 700m
     networks:
-      -ezybank
+      - ezybank
   cards:
     image: "emirhanbaran/cards:s4"
     container_name: cards-ms
@@ -31,7 +31,8 @@ services:
         limits:
           memory: 700m
     networks:
-      -ezybank
+      - ezybank
+
 networks:
-  eazybank:
-    driver: "bridge"
+  ezybank:
+    driver: bridge
