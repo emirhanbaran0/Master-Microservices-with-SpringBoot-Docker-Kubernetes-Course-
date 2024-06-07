@@ -1,6 +1,7 @@
 package com.emirhanbaran.accounts.controller;
 
 import com.emirhanbaran.accounts.constants.AccountConstants;
+import com.emirhanbaran.accounts.dto.AccountContactInfoDto;
 import com.emirhanbaran.accounts.dto.CustomerDto;
 import com.emirhanbaran.accounts.dto.ErrorResponseDto;
 import com.emirhanbaran.accounts.dto.ResponseDto;
@@ -23,6 +24,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 
 @RestController
 @RequestMapping(path = "/api",produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -38,6 +41,7 @@ public class AccountsController {
     private String buildVersion;
     private final Environment environment;
     private final AccountService accountService;
+    private final AccountContactInfoDto accountContactInfoDto;
 
     @PostMapping("/create")
     @Operation(summary = "Create Account REST API"
@@ -129,6 +133,16 @@ public class AccountsController {
     @GetMapping("/java-version")
     public ResponseEntity<String> getJavaVersion(){
         return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("JAVA_HOME"));
+    }
+
+    @Operation(summary = "Get contact info of Account MS ")
+    @ApiResponses( {
+            @ApiResponse( responseCode = "200", description = "HTTP Status OK"),
+            @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR")
+    })
+    @GetMapping("/contact-info")
+    public ResponseEntity<Map<String,String>> getContactInfo(){
+        return ResponseEntity.status(HttpStatus.OK).body(accountContactInfoDto.contactDetails());
     }
 
 }

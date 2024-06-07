@@ -19,3 +19,12 @@ spring:
 
 build:
   version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related local APIs"
+  contact-details:
+    name: "Emirhan Baran- Developer"
+    email: "emir.baran255@gmail.com"
+  on-call-support:
+    - 05144305129
+    - 21324211123
