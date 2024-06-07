@@ -14,7 +14,9 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -34,7 +36,7 @@ public class AccountsController {
 
     @Value("${build.version}")
     private String buildVersion;
-
+    private final Environment environment;
     private final AccountService accountService;
 
     @PostMapping("/create")
@@ -118,4 +120,15 @@ public class AccountsController {
     public ResponseEntity<String> getBuildInfo(){
         return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
     }
+
+    @Operation(summary = "Get Java Version of Account MS ")
+    @ApiResponses( {
+            @ApiResponse( responseCode = "200", description = "HTTP Status OK"),
+            @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR")
+    })
+    @GetMapping("/java-version")
+    public ResponseEntity<String> getJavaVersion(){
+        return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("JAVA_HOME"));
+    }
+
 }
