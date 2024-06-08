@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="57f8b462-5a31-4936-9600-8c83944517c9" name="Changes" comment="Add contact info and update version for various services&#10;&#10;Several service updates have been made: the Cards, Loans, and Accounts services now include contact info with relevant DTO alteration. Moreover, new API endpoints for 'build-info', 'java-info', and 'contact-info' are added to retrieve build version, Java version, and contact information. Corresponding '.yml' files are also updated or added to support multiple profiles, set the active profile, and define additional properties. IDE-specific files and modules are updated or deleted as needed.">
+      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "Spring Boot.LoansApplication.executor": "Debug",
+    "git-widget-placeholder": "master",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="LoansApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="loans" />
+      <option name="PROGRAM_PARAMETERS" value="--spring.profiles.active=prod" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.emirhanbaran.loans.LoansApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emirhanbaran.loans.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add contact info and update version for various services&#10;&#10;Several service updates have been made: the Cards, Loans, and Accounts services now include contact info with relevant DTO alteration. Moreover, new API endpoints for 'build-info', 'java-info', and 'contact-info' are added to retrieve build version, Java version, and contact information. Corresponding '.yml' files are also updated or added to support multiple profiles, set the active profile, and define additional properties. IDE-specific files and modules are updated or deleted as needed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add contact info and update version for various services&#10;&#10;Several service updates have been made: the Cards, Loans, and Accounts services now include contact info with relevant DTO alteration. Moreover, new API endpoints for 'build-info', 'java-info', and 'contact-info' are added to retrieve build version, Java version, and contact information. Corresponding '.yml' files are also updated or added to support multiple profiles, set the active profile, and define additional properties. IDE-specific files and modules are updated or deleted as needed." />
+  </component>
+</project>
