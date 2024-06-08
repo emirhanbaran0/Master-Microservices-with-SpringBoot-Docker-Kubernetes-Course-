@@ -4,6 +4,7 @@ package com.emirhanbaran.loans.controller;
 import com.emirhanbaran.loans.constants.LoansConstants;
 import com.emirhanbaran.loans.dto.ErrorResponseDto;
 import com.emirhanbaran.loans.dto.LoansDto;
+import com.emirhanbaran.loans.dto.LoanConfigInfoDto;
 import com.emirhanbaran.loans.dto.ResponseDto;
 import com.emirhanbaran.loans.service.LoanService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -14,8 +15,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +39,10 @@ import org.springframework.web.bind.annotation.*;
 public class LoansController {
 
     private final LoanService loanService;
+    @Value("${build.version}")
+    private String buildVersion;
+    private final Environment environment;
+    private final LoanConfigInfoDto loginConfigInfoDto;
 
     @Operation(
             summary = "Create Loan REST API",
@@ -165,5 +171,21 @@ public class LoansController {
                     .body(new ResponseDto(LoansConstants.STATUS_417, LoansConstants.MESSAGE_417_DELETE));
         }
     }
+
+    @GetMapping("build-info")
+    public ResponseEntity<String> getBuildInfo() {
+        return  ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+    }
+
+    @GetMapping("java-info")
+    public ResponseEntity<String> getJavaInfo() {
+        return  ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("JAVA_HOME"));
+    }
+
+    @GetMapping("contact-info")
+    public ResponseEntity<LoanConfigInfoDto> getContactInfo(){
+        return ResponseEntity.status(HttpStatus.OK).body(loginConfigInfoDto);
+    }
+
 
 }

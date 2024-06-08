@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+
+
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related QA APIs"
+  contact-details:
+    name: "John Doe- QA Lead"
+    email: "john2322@gmail.com"
+  on-call-support:
+    - 05144305121
+    - 2132412411123
+
