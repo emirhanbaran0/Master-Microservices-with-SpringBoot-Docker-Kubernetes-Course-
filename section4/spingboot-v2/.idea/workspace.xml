@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/spingboot-v2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers.">
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/account-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/account-qa.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/account.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/card.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/card_prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/card_qa.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loan.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loan_prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loan_qa.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spingboot-v1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +38,10 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ConfigserverApplication.executor": "Run",
+    "Spring Boot.ConfigserverApplication.executor": "Debug",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/Desktop/UdemyMicroservices/microservices/section4/spingboot-v2/configserver/src/main/resources/config",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -49,6 +54,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Desktop\UdemyMicroservices\microservices\section4\spingboot-v2\configserver\src\main\resources\config" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.ConfigserverApplication">
     <configuration name="CardsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cards" />
@@ -83,15 +93,34 @@
       <updated>1717868322500</updated>
       <workItem from="1717868323629" duration="874000" />
       <workItem from="1717869217514" duration="286000" />
-      <workItem from="1717869523121" duration="757000" />
+      <workItem from="1717869523121" duration="2070000" />
     </task>
+    <task id="LOCAL-00001" summary="Update project configurations and add new module&#10;&#10;The project configurations have been updated by deleting irrelevant files and updating the project's .iml file. In addition, a new module called 'configserver' has been introduced; its source code uses the &quot;UTF-8&quot; character encoding, related options have been added to the compiler's additional options, and pom.xml file is included in the module settings. Finally, a new banner.txt file has been added to the configserver module.">
+      <option name="closed" value="true" />
+      <created>1717873130230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1717873130230</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers.">
+      <option name="closed" value="true" />
+      <created>1717873161015</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717873161015</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Update project configurations and add new module&#10;&#10;The project configurations have been updated by deleting irrelevant files and updating the project's .iml file. In addition, a new module called 'configserver' has been introduced; its source code uses the &quot;UTF-8&quot; character encoding, related options have been added to the compiler's additional options, and pom.xml file is included in the module settings. Finally, a new banner.txt file has been added to the configserver module." />
+    <MESSAGE value="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
