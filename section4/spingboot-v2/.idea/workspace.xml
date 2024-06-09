@@ -4,19 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers.">
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/account-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/account-qa.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/account.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/card.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/card_prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/card_qa.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loan.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loan_prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loan_qa.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Add new configuration files for bank modules&#10;&#10;The commit introduces new configuration files for account, card, and loan modules in the config server. They are specified for each environment: prod, QA, and local. Additionally, updates have been done on application.yml to specify the location of these files. Also included are modifications in .idea/compiler.xml and .idea/workspace.xml files.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application_prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application_qa.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/java/com/emirhanbaran/configserver/ConfigserverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/java/com/emirhanbaran/configserver/ConfigServerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/account-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/accounts-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/account-qa.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/accounts-qa.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/account.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/accounts.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/card-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/cards-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/card-qa.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/cards-qa.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/card.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/cards.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/loan-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loans-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/loan-qa.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loans-qa.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/config/loan.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/config/loans.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +40,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Database detector": "Database detector",
+    "Notification.DoNotAsk-Database detector": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AccountsApplication.executor": "Debug",
+    "Spring Boot.ConfigServerApplication.executor": "Debug",
     "Spring Boot.ConfigserverApplication.executor": "Debug",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -50,6 +62,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "ml.llm.LLMConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
@@ -59,10 +72,46 @@
       <recent name="C:\Users\DELL\Desktop\UdemyMicroservices\microservices\section4\spingboot-v2\configserver\src\main\resources\config" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigserverApplication">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AccountsApplication">
+    <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="accounts" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.emirhanbaran.accounts.AccountsApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emirhanbaran.accounts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CardsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="cards" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.emirhanbaran.cards.CardsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="configserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.emirhanbaran.configserver.ConfigServerApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emirhanbaran.configserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,6 +123,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AccountsApplication" />
+        <item itemvalue="Spring Boot.ConfigServerApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -93,7 +148,9 @@
       <updated>1717868322500</updated>
       <workItem from="1717868323629" duration="874000" />
       <workItem from="1717869217514" duration="286000" />
-      <workItem from="1717869523121" duration="2070000" />
+      <workItem from="1717869523121" duration="6805000" />
+      <workItem from="1717927510704" duration="68000" />
+      <workItem from="1717963989813" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary="Update project configurations and add new module&#10;&#10;The project configurations have been updated by deleting irrelevant files and updating the project's .iml file. In addition, a new module called 'configserver' has been introduced; its source code uses the &quot;UTF-8&quot; character encoding, related options have been added to the compiler's additional options, and pom.xml file is included in the module settings. Finally, a new banner.txt file has been added to the configserver module.">
       <option name="closed" value="true" />
@@ -111,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717873161015</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add new configuration files for bank modules&#10;&#10;The commit introduces new configuration files for account, card, and loan modules in the config server. They are specified for each environment: prod, QA, and local. Additionally, updates have been done on application.yml to specify the location of these files. Also included are modifications in .idea/compiler.xml and .idea/workspace.xml files.">
+      <option name="closed" value="true" />
+      <created>1717874627784</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717874627784</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +185,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update project configurations and add new module&#10;&#10;The project configurations have been updated by deleting irrelevant files and updating the project's .iml file. In addition, a new module called 'configserver' has been introduced; its source code uses the &quot;UTF-8&quot; character encoding, related options have been added to the compiler's additional options, and pom.xml file is included in the module settings. Finally, a new banner.txt file has been added to the configserver module." />
     <MESSAGE value="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers." />
+    <MESSAGE value="Add new configuration files for bank modules&#10;&#10;The commit introduces new configuration files for account, card, and loan modules in the config server. They are specified for each environment: prod, QA, and local. Additionally, updates have been done on application.yml to specify the location of these files. Also included are modifications in .idea/compiler.xml and .idea/workspace.xml files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new configuration files for bank modules&#10;&#10;The commit introduces new configuration files for account, card, and loan modules in the config server. They are specified for each environment: prod, QA, and local. Additionally, updates have been done on application.yml to specify the location of these files. Also included are modifications in .idea/compiler.xml and .idea/workspace.xml files." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
