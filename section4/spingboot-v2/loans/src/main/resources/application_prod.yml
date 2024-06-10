@@ -1,7 +1,0 @@
-spring:
-  config:
-    profiles:
-      activate: "prod"
-
-build:
-  version: "1.0"

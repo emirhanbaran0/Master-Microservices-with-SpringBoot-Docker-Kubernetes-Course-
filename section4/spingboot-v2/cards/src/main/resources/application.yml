@@ -1,6 +1,11 @@
 server:
   port: 9000
+
 spring:
+  application:
+    name: "cards"
+  profiles:
+    active: "qa"
   datasource:
     url: jdbc:h2:mem:testdb
     driverClassName: org.h2.Driver
@@ -15,22 +20,4 @@ spring:
       ddl-auto: update
     show-sql: true
   config:
-    import:
-      - "application_prod.yml"
-      - "application_qa.yml"
-  profiles:
-    active:
-      - "qa"
-
-build:
-  version: "3.0"
-
-card:
-  message: "Welcome to EazyBank cards related local APIs"
-  contact-details:
-    name: "Emirhan Baran - Developer"
-    email: "emir.baran255@gmai.com"
-  on-call-support:
-    - 05323123514
-    - 45125125512
-
+    import: "configserver:http://localhost:8071/"  #if your application properties are really important you can remove optional prefix

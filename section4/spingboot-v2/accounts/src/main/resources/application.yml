@@ -20,5 +20,5 @@ spring:
   h2:
     console:
       enabled: true
-  config:
-    uri: "configserver:http://localhost:8071/"  #if your application properties are really important you can remove optional prefix
+  config: #if your application properties are really important you can remove optional prefix
+    import: "optional:configserver:http://localhost:8071/"
