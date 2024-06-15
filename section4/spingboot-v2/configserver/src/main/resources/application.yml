@@ -1,14 +1,23 @@
-spring:
-  application:
-    name: "configserver"
-  profiles:
-    active: native #with this we say spring cloud that we want to activate native profile -> we use filepath
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: "file:///C://Users//DELL//Documents//config"
-        #search-locations: "classpath:/config"
 server:
   port: 8071
 
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:emirhanbaran0/eazybank-config.git
+          default-label: main # default branch
+          timeout: 5 # should wait until 5 seconds if it's not successful to connect config server should throw an exception
+          clone-on-start: true
+          force-pull: true # reading always the latest config from the main branch
+          private-key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            --- Your private key
+            ---
+            ---
+            -----END OPENSSH PRIVATE KEY-----
