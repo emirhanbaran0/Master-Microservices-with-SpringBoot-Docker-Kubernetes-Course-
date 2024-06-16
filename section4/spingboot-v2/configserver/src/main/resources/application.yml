@@ -21,3 +21,6 @@ spring:
             ---
             ---
             -----END OPENSSH PRIVATE KEY-----
+
+encrypt:
+  key:  "C1HANG1R-K3N3DY"  #For encrypting our application properties.

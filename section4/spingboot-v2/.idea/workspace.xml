@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Update workspace xml and application yml configurations&#10;&#10;The changes primarily focus on updating the workspace xml file by removing unnecessary file changes, replacing CDATA with direct quotations, and adding a new work item duration. Simultaneously, the config server's application yml file was modified to point to a new search location.">
+    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
     </list>
@@ -122,8 +122,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.AccountsApplication" />
-        <item itemvalue="Spring Boot.LoansApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
+        <item itemvalue="Spring Boot.LoansApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +148,8 @@
       <workItem from="1717869523121" duration="6805000" />
       <workItem from="1717927510704" duration="68000" />
       <workItem from="1717963989813" duration="798000" />
-      <workItem from="1718432937717" duration="4731000" />
+      <workItem from="1718432937717" duration="5694000" />
+      <workItem from="1718525317569" duration="4598000" />
     </task>
     <task id="LOCAL-00001" summary="Update project configurations and add new module&#10;&#10;The project configurations have been updated by deleting irrelevant files and updating the project's .iml file. In addition, a new module called 'configserver' has been introduced; its source code uses the &quot;UTF-8&quot; character encoding, related options have been added to the compiler's additional options, and pom.xml file is included in the module settings. Finally, a new banner.txt file has been added to the configserver module.">
       <option name="closed" value="true" />
@@ -182,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718434367579</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed.">
+      <option name="closed" value="true" />
+      <created>1718438167178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718438167178</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,7 +213,8 @@
     <MESSAGE value="Add ConfigServer application&#10;&#10;Created a new Spring Boot application named ConfigServer. The application includes a new .gitignore file, an application configuration file, a main application class, and a test class. Generated necessary files to handle the project dependencies, including pom.xml and Maven Wrappers." />
     <MESSAGE value="Add new configuration files for bank modules&#10;&#10;The commit introduces new configuration files for account, card, and loan modules in the config server. They are specified for each environment: prod, QA, and local. Additionally, updates have been done on application.yml to specify the location of these files. Also included are modifications in .idea/compiler.xml and .idea/workspace.xml files." />
     <MESSAGE value="Update workspace xml and application yml configurations&#10;&#10;The changes primarily focus on updating the workspace xml file by removing unnecessary file changes, replacing CDATA with direct quotations, and adding a new work item duration. Simultaneously, the config server's application yml file was modified to point to a new search location." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace xml and application yml configurations&#10;&#10;The changes primarily focus on updating the workspace xml file by removing unnecessary file changes, replacing CDATA with direct quotations, and adding a new work item duration. Simultaneously, the config server's application yml file was modified to point to a new search location." />
+    <MESSAGE value="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
