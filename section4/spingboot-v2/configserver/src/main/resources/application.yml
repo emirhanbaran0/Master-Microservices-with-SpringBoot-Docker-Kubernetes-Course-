@@ -17,10 +17,14 @@ spring:
           force-pull: true # reading always the latest config from the main branch
           private-key: |
             -----BEGIN OPENSSH PRIVATE KEY-----
-            --- Your private key
+            ---
             ---
             ---
             -----END OPENSSH PRIVATE KEY-----
-
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
 encrypt:
   key:  "C1HANG1R-K3N3DY"  #For encrypting our application properties.
