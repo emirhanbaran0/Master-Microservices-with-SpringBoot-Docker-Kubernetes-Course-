@@ -142,7 +142,7 @@ public class AccountsController {
     })
     @GetMapping("/contact-info")
     public ResponseEntity<Map<String,String>> getContactInfo(){
-        return ResponseEntity.status(HttpStatus.OK).body(accountContactInfoDto.contactDetails());
+        return ResponseEntity.status(HttpStatus.OK).body(accountContactInfoDto.getContactDetails());
     }
 
 }

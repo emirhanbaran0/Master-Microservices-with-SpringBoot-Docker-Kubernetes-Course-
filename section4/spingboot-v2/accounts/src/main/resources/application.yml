@@ -22,3 +22,15 @@ spring:
       enabled: true
   config: #if your application properties are really important you can remove optional prefix
     import: "optional:configserver:http://localhost:8071/"
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"

@@ -21,4 +21,15 @@ spring:
     show-sql: true
   config:
     import: "optional:configserver:http://localhost:8071/"  #if your application properties are really important you can remove optional prefix
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
 
+
+management:
+  endpoint:
+    web:
+      exposure:
+        include: "*"

@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed.">
+    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Refine workspace XML and application YML configurations&#10;&#10;This update primarily modifies the workspace XML and application YML configurations. Unnecessary file changes have been removed, while CDATA was replaced with direct quotes and the work item duration was increased. The config server's application YML file was updated to direct towards new search locations, and modifications were made to options related to RunManager and localTasksCounter.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/controller/AccountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/controller/AccountsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/dto/AccountContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/dto/AccountContactInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/java/com/emirhanbaran/cards/dto/CardConfigInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/java/com/emirhanbaran/cards/dto/CardConfigInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/java/com/emirhanbaran/loans/dto/LoanConfigInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/java/com/emirhanbaran/loans/dto/LoanConfigInfoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +38,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;HTTP Request.CardsApplication | #1.executor&quot;: &quot;Run&quot;,
     &quot;Notification.DisplayName-DoNotAsk-Database detector&quot;: &quot;Database detector&quot;,
     &quot;Notification.DoNotAsk-Database detector&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
@@ -56,6 +68,9 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\DELL\Desktop\UdemyMicroservices\microservices\section4\spingboot-v2\configserver\src\main\resources\config" />
@@ -70,7 +85,10 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+  <component name="RunManager" selected="HTTP Request.CardsApplication | #1">
+    <configuration name="CardsApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/CardsApplication.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="accounts" />
@@ -121,9 +139,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.LoansApplication" />
         <item itemvalue="Spring Boot.AccountsApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
-        <item itemvalue="Spring Boot.LoansApplication" />
+        <item itemvalue="HTTP Request.CardsApplication | #1" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +168,9 @@
       <workItem from="1717927510704" duration="68000" />
       <workItem from="1717963989813" duration="798000" />
       <workItem from="1718432937717" duration="5694000" />
-      <workItem from="1718525317569" duration="4598000" />
+      <workItem from="1718525317569" duration="6603000" />
+      <workItem from="1718554401124" duration="45000" />
+      <workItem from="1718554499980" duration="3208000" />
     </task>
     <task id="LOCAL-00001" summary="Update project configurations and add new module&#10;&#10;The project configurations have been updated by deleting irrelevant files and updating the project's .iml file. In addition, a new module called 'configserver' has been introduced; its source code uses the &quot;UTF-8&quot; character encoding, related options have been added to the compiler's additional options, and pom.xml file is included in the module settings. Finally, a new banner.txt file has been added to the configserver module.">
       <option name="closed" value="true" />
@@ -191,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718438167178</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refine workspace XML and application YML configurations&#10;&#10;This update primarily modifies the workspace XML and application YML configurations. Unnecessary file changes have been removed, while CDATA was replaced with direct quotes and the work item duration was increased. The config server's application YML file was updated to direct towards new search locations, and modifications were made to options related to RunManager and localTasksCounter.">
+      <option name="closed" value="true" />
+      <created>1718533711439</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718533711439</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +243,8 @@
     <MESSAGE value="Add new configuration files for bank modules&#10;&#10;The commit introduces new configuration files for account, card, and loan modules in the config server. They are specified for each environment: prod, QA, and local. Additionally, updates have been done on application.yml to specify the location of these files. Also included are modifications in .idea/compiler.xml and .idea/workspace.xml files." />
     <MESSAGE value="Update workspace xml and application yml configurations&#10;&#10;The changes primarily focus on updating the workspace xml file by removing unnecessary file changes, replacing CDATA with direct quotations, and adding a new work item duration. Simultaneously, the config server's application yml file was modified to point to a new search location." />
     <MESSAGE value="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed." />
+    <MESSAGE value="Refine workspace XML and application YML configurations&#10;&#10;This update primarily modifies the workspace XML and application YML configurations. Unnecessary file changes have been removed, while CDATA was replaced with direct quotes and the work item duration was increased. The config server's application YML file was updated to direct towards new search locations, and modifications were made to options related to RunManager and localTasksCounter." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refine workspace XML and application YML configurations&#10;&#10;This update primarily modifies the workspace XML and application YML configurations. Unnecessary file changes have been removed, while CDATA was replaced with direct quotes and the work item duration was increased. The config server's application YML file was updated to direct towards new search locations, and modifications were made to options related to RunManager and localTasksCounter." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

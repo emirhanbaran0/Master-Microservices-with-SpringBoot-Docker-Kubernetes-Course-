@@ -1,10 +1,19 @@
 package com.emirhanbaran.cards.dto;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;
 import java.util.Map;
 
 @ConfigurationProperties(prefix = "card")
-public record CardConfigInfoDto(String message, Map<String, String> contactDetails, List<String> onCallSupport) {
+@Getter
+@Setter
+//Records are immutable!
+public class CardConfigInfoDto{
+
+    String message;
+    Map<String,String> contactDetails;
+    List<String> onCallSupport;
 }
