@@ -1,0 +1,27 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: "cards"
+  profiles:
+    active: "prod"
+  jpa:
+    show-sql: true
+    open-in-view: false
+  sql:
+    init:
+      mode: always
+  datasource:
+    url: jdbc:mysql://localhost:3308/cardsdb
+    username: root
+    password: root
+  config:
+    import: "optional:configserver:http://localhost:8071/"  #if your application properties are really important you can remove optional prefix
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
