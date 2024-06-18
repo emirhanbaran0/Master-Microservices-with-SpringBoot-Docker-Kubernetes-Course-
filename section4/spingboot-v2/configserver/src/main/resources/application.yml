@@ -1,6 +1,3 @@
-server:
-  port: 8071
-
 spring:
   application:
     name: configserver
@@ -10,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:emirhanbaran0/eazybank-config.git
+          uri: "https://github.com/emirhanbaran0/eazybank-config"
           default-label: main # default branch
           timeout: 5 # should wait until 5 seconds if it's not successful to connect config server should throw an exception
           clone-on-start: true
@@ -28,13 +25,17 @@ management:
       exposure:
         include: "*"
   health:
-    readinessstate:  # "/actuator/health/readiness"
+    readiness-state:  # "/actuator/health/readiness"
       enabled: true
-    livenessstate:  # "/actuator/health/readiness"
+    liveness-state:  # "/actuator/health/readiness"
       enabled: true
   endpoint:
     health:
       probes:
         enabled: true
+
 encrypt:
   key:  "C1HANG1R-K3N3DY"  #For encrypting our application properties.
+
+server:
+  port: 8071

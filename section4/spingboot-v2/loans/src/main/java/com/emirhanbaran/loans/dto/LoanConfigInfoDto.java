@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import java.util.List;
 import java.util.Map;
 
-@ConfigurationProperties(prefix = "loan")
+@ConfigurationProperties(prefix = "loans")
 @Getter
 @Setter
 public class LoanConfigInfoDto {
