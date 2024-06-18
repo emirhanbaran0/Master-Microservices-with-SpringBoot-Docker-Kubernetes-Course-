@@ -1,6 +1,6 @@
 spring:
   application:
-    name: configserver
+    name: "configserver"
   profiles:
     active: git
   cloud:
@@ -12,6 +12,7 @@ spring:
           timeout: 5 # should wait until 5 seconds if it's not successful to connect config server should throw an exception
           clone-on-start: true
           force-pull: true # reading always the latest config from the main branch
+
 
   rabbitmq:
     host: "localhost"
@@ -25,10 +26,10 @@ management:
       exposure:
         include: "*"
   health:
-    readiness-state:  # "/actuator/health/readiness"
-      enabled: true
-    liveness-state:  # "/actuator/health/readiness"
-      enabled: true
+    readiness-state:
+      enabled: true  # "/actuator/health/readiness"
+    liveness-state:
+      enabled: true  # "/actuator/health/readiness"
   endpoint:
     health:
       probes:
