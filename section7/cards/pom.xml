@@ -93,7 +93,7 @@
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>emirhanbaran/${project.artifactId}:s6</image>
+						<image>emirhanbaran/${project.artifactId}:s7</image>
 					</to>
 				</configuration>
 			</plugin>

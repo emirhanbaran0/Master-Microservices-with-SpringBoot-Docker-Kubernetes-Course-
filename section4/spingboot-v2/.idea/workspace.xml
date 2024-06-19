@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Refine workspace XML and application YML configurations&#10;&#10;This update primarily modifies the workspace XML and application YML configurations. Unnecessary file changes have been removed, while CDATA was replaced with direct quotes and the work item duration was increased. The config server's application YML file was updated to direct towards new search locations, and modifications were made to options related to RunManager and localTasksCounter.">
+    <list default="true" id="585cd9a4-bc9d-413b-b281-b26f98f6b799" name="Changes" comment="Update docker-compose configurations and application.yml files&#10;&#10;This commit updates the RabbitMQ version, and modifies application.yml in different modules. It also introduces new docker-compose configurations for the prod and QA environments, with adjustments in their respective common-config.yml files. Minor changes include formatting and adding certain properties in the application yml files, while certain properties in pom.xml files have been modified. Furthermore, a new file .gitignore has also been introduced.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/controller/AccountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/controller/AccountsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/dto/AccountContactInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/java/com/emirhanbaran/accounts/dto/AccountContactInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/java/com/emirhanbaran/cards/dto/CardConfigInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/java/com/emirhanbaran/cards/dto/CardConfigInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cards/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/java/com/emirhanbaran/loans/dto/LoanConfigInfoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/java/com/emirhanbaran/loans/dto/LoanConfigInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loans/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/loans/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,43 +24,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.CardsApplication | #1.executor&quot;: &quot;Run&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-Database detector&quot;: &quot;Database detector&quot;,
-    &quot;Notification.DoNotAsk-Database detector&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AccountsApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.CardsApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.ConfigServerApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.ConfigserverApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.LoansApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/DELL/Desktop/UdemyMicroservices/microservices/section4/spingboot-v2/configserver/src/main/resources/config&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;spring&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "HTTP Request.CardsApplication | #1.executor": "Run",
+    "Notification.DisplayName-DoNotAsk-Database detector": "Database detector",
+    "Notification.DisplayName-DoNotAsk-HotSwap": "Hot Swap performed",
+    "Notification.DoNotAsk-Database detector": "true",
+    "Notification.DoNotAsk-HotSwap": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AccountsApplication.executor": "Debug",
+    "Spring Boot.CardsApplication.executor": "Debug",
+    "Spring Boot.ConfigServerApplication.executor": "Debug",
+    "Spring Boot.ConfigserverApplication.executor": "Debug",
+    "Spring Boot.LoansApplication.executor": "Debug",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/DELL/Desktop/UdemyMicroservices/microservices/section4/spingboot-v2/docker-compose/qa",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "spring",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\DELL\Desktop\UdemyMicroservices\microservices\section4\spingboot-v2\docker-compose\qa" />
+      <recent name="C:\Users\DELL\Desktop\UdemyMicroservices\microservices\section4\spingboot-v2\docker-compose\prod" />
       <recent name="C:\Users\DELL\Desktop\UdemyMicroservices\microservices\section4\spingboot-v2\configserver\src\main\resources\config" />
     </key>
   </component>
@@ -85,10 +78,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.CardsApplication | #1">
-    <configuration name="CardsApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/CardsApplication.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.CardsApplication">
     <configuration name="AccountsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="accounts" />
@@ -137,12 +127,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.CardsApplication" />
+      <item itemvalue="Spring Boot.AccountsApplication" />
+      <item itemvalue="Spring Boot.ConfigServerApplication" />
+      <item itemvalue="Spring Boot.LoansApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.LoansApplication" />
-        <item itemvalue="Spring Boot.AccountsApplication" />
         <item itemvalue="Spring Boot.ConfigServerApplication" />
-        <item itemvalue="HTTP Request.CardsApplication | #1" />
+        <item itemvalue="Spring Boot.AccountsApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +215,31 @@
       <option name="project" value="LOCAL" />
       <updated>1718533711439</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add RabbitMQ service and update service dependencies&#10;&#10;The docker-compose configuration is updated to include RabbitMQ as a new service. The healthcheck, extended configuration, and dependency for each existing service (configserver, accounts, loans, cards) are also set to ensure correct startup order and isolation. Furthermore, a common configuration file has been introduced to avoid redundancy and ensure consistency across all microservices.">
+      <option name="closed" value="true" />
+      <created>1718620198548</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1718620198548</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update config setting names and identifiers&#10;&#10;The configuration settings in the YAML files and DTOs have been updated. Changes include modifications of the git URI to HTTPS, correction of readiness and liveness state keys, and changes in configuration property prefixes for card and loans services. Furthermore, rearranges the port configuration to the end of the file and adjusts the active profile setting in cards application.">
+      <option name="closed" value="true" />
+      <created>1718699981501</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718699981502</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update docker-compose configurations and application.yml files&#10;&#10;This commit updates the RabbitMQ version, and modifies application.yml in different modules. It also introduces new docker-compose configurations for the prod and QA environments, with adjustments in their respective common-config.yml files. Minor changes include formatting and adding certain properties in the application yml files, while certain properties in pom.xml files have been modified. Furthermore, a new file .gitignore has also been introduced.">
+      <option name="closed" value="true" />
+      <created>1718713413067</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718713413067</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +263,11 @@
     <MESSAGE value="Update workspace xml and application yml configurations&#10;&#10;The changes primarily focus on updating the workspace xml file by removing unnecessary file changes, replacing CDATA with direct quotations, and adding a new work item duration. Simultaneously, the config server's application yml file was modified to point to a new search location." />
     <MESSAGE value="Update workspace XML and application YML configurations&#10;&#10;The workspace XML and application YML configurations were revised primarily to remove unnecessary file changes, swap CDATA with direct quotes, and augment the work item duration. Concurrently, the locations in the config server's application YML file were updated to direct towards new search locations. Additionally, options related to RunManager and localTasksCounter got modifed." />
     <MESSAGE value="Refine workspace XML and application YML configurations&#10;&#10;This update primarily modifies the workspace XML and application YML configurations. Unnecessary file changes have been removed, while CDATA was replaced with direct quotes and the work item duration was increased. The config server's application YML file was updated to direct towards new search locations, and modifications were made to options related to RunManager and localTasksCounter." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refine workspace XML and application YML configurations&#10;&#10;This update primarily modifies the workspace XML and application YML configurations. Unnecessary file changes have been removed, while CDATA was replaced with direct quotes and the work item duration was increased. The config server's application YML file was updated to direct towards new search locations, and modifications were made to options related to RunManager and localTasksCounter." />
+    <MESSAGE value="Enable health and endpoint probes in application configuration&#10;&#10;Enhancements have been made in the application.yml file to enable health readiness and liveness states in the configuration server. Additionally, endpoint health probes have been activated, improving the system's resilience and operability." />
+    <MESSAGE value="Add RabbitMQ service and update service dependencies&#10;&#10;The docker-compose configuration is updated to include RabbitMQ as a new service. The healthcheck, extended configuration, and dependency for each existing service (configserver, accounts, loans, cards) are also set to ensure correct startup order and isolation. Furthermore, a common configuration file has been introduced to avoid redundancy and ensure consistency across all microservices." />
+    <MESSAGE value="Update config setting names and identifiers&#10;&#10;The configuration settings in the YAML files and DTOs have been updated. Changes include modifications of the git URI to HTTPS, correction of readiness and liveness state keys, and changes in configuration property prefixes for card and loans services. Furthermore, rearranges the port configuration to the end of the file and adjusts the active profile setting in cards application." />
+    <MESSAGE value="Update docker-compose configurations and application.yml files&#10;&#10;This commit updates the RabbitMQ version, and modifies application.yml in different modules. It also introduces new docker-compose configurations for the prod and QA environments, with adjustments in their respective common-config.yml files. Minor changes include formatting and adding certain properties in the application yml files, while certain properties in pom.xml files have been modified. Furthermore, a new file .gitignore has also been introduced." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update docker-compose configurations and application.yml files&#10;&#10;This commit updates the RabbitMQ version, and modifies application.yml in different modules. It also introduces new docker-compose configurations for the prod and QA environments, with adjustments in their respective common-config.yml files. Minor changes include formatting and adding certain properties in the application yml files, while certain properties in pom.xml files have been modified. Furthermore, a new file .gitignore has also been introduced." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

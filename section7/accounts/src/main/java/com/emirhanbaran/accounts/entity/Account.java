@@ -1,6 +1,7 @@
 package com.emirhanbaran.accounts.entity;
 
 
+import com.emirhanbaran.accounts.utils.RandomStringGenerator;
 import jakarta.persistence.*;
 import lombok.*;
 
