@@ -23,7 +23,34 @@ spring:
     import: "optional:configserver:http://localhost:8071/"  #if your application properties are really important you can remove optional prefix
 
 management:
-  endpoint:
+  endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      env:
+        enabled: true
+
+endpoints:
+  shutdown:
+    enabled: true
+
+
+
+eureka:
+  instance:
+    prefer-ip-address: true  #account ms will register to the eureka server with using ıp address
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
+info:
+  app:
+    name: "accounts"
+    description: "Eazy Bank Accounts Application"
+    version: "1.0.0"
