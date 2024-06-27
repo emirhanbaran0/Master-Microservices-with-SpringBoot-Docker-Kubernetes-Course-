@@ -32,7 +32,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Validated
 @Tag(
-        name = "CRUD RST APIs for Accounts in EazyBank",
+        name = "CRUD REST APIs for Accounts in EazyBank",
         description = "CRUD REST APIs in EazyBank to CREATE,UPDATE,FETCH AND DELETE account details"
     )
 public class AccountsController {
