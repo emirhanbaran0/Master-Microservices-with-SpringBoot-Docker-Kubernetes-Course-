@@ -35,7 +35,7 @@ public class CustomerService {
      * @param mobileNumber - Input Mobile Number
      * @return Customer Details based on a given mobileNumber
      */
-    public CustomerDetailsDto fetchCustomerDetails(String mobileNumber) {
+    public CustomerDetailsDto fetchCustomerDetails(String mobileNumber,String correlationId) {
         Customer customer=customerRepository.findByMobileNumber(mobileNumber).orElseThrow(
                 ()->{throw new ResourceNotFoundException("Customer","mobileNumber",mobileNumber);}
         );
@@ -44,11 +44,11 @@ public class CustomerService {
         );
         CustomerDetailsDto customerDetailsDto=CustomerMapper.mapToCustomerDetailsDto(customer,new CustomerDetailsDto());
         customerDetailsDto.setAccountsDto(AccountsMapper.mapToAccountsDto(account,new AccountsDto()));
-        ResponseEntity<CardsDto> cardsResponse = cardsFeignClient.fetchCardDetails(mobileNumber);
+        ResponseEntity<CardsDto> cardsResponse = cardsFeignClient.fetchCardDetails(correlationId,mobileNumber);
         if (cardsResponse.getStatusCode() == HttpStatus.OK) {
             customerDetailsDto.setCardsDto(cardsResponse.getBody());
         }
-        ResponseEntity<LoansDto> loansResponse = loansFeignClient.fetchLoanDetails(mobileNumber);
+        ResponseEntity<LoansDto> loansResponse = loansFeignClient.fetchLoanDetails(correlationId,mobileNumber);
         if (loansResponse.getStatusCode() == HttpStatus.OK) {
             customerDetailsDto.setLoansDto(loansResponse.getBody());
         }
