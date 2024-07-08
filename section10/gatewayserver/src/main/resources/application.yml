@@ -36,3 +36,13 @@ logging:
       emirhanbaran:
         gatewayserver: DEBUG
 
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      sliding-window-size: 10 #With this property we are communicating to the circuit breaker on how many request it has to initially monitor before changing the status.
+      permitted-number-of-calls-in-half-open-state: 2
+      failure-rate-threshold: 50
+      wait-duration-in-open-state:
+        nanos: 10000
+
+
