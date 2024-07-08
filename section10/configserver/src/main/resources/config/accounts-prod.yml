@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank accounts related PROD APIs"
+  contact-details:
+    name: "Emir Baran- Prod Lead"
+    email: "emir.baran25@gmail.com"
+  on-call-support:
+    - 05144305129
+    - 21324211123
