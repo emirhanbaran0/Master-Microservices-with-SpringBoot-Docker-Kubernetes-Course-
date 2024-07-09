@@ -13,6 +13,7 @@ import com.emirhanbaran.accounts.repository.AccountRepository;
 import com.emirhanbaran.accounts.repository.CustomerRepository;
 import com.emirhanbaran.accounts.service.client.CardsFeignClient;
 import com.emirhanbaran.accounts.service.client.LoansFeignClient;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ import org.springframework.stereotype.Service;
 import static com.emirhanbaran.accounts.mapper.CustomerMapper.mapToCustomerDetailsDto;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class CustomerService {
 
     private final AccountRepository accountRepository;
