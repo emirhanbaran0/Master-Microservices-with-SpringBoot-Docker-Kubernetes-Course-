@@ -6,6 +6,8 @@ import com.emirhanbaran.accounts.dto.CustomerDto;
 import com.emirhanbaran.accounts.dto.ErrorResponseDto;
 import com.emirhanbaran.accounts.dto.ResponseDto;
 import com.emirhanbaran.accounts.service.AccountService;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -120,9 +122,14 @@ public class AccountsController {
             @ApiResponse( responseCode = "200", description = "HTTP Status OK"),
             @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR")
     })
+    @Retry(name = "getBuildInfo",fallbackMethod = "getBuildInfoFallback")
     @GetMapping("/build-info")
     public ResponseEntity<String> getBuildInfo(){
         return ResponseEntity.status(HttpStatus.OK).body(buildVersion);
+    }
+
+    public ResponseEntity<String> getBuildInfoFallback(Throwable throwable){
+        return ResponseEntity.status(HttpStatus.OK).body("0.9");
     }
 
     @Operation(summary = "Get Java Version of Account MS ")
@@ -130,9 +137,14 @@ public class AccountsController {
             @ApiResponse( responseCode = "200", description = "HTTP Status OK"),
             @ApiResponse(responseCode = "500", description = "INTERNAL SERVER ERROR")
     })
+    @RateLimiter(name = "getJavaVersion", fallbackMethod = "getJavaVersionFallback")
     @GetMapping("/java-version")
     public ResponseEntity<String> getJavaVersion(){
         return ResponseEntity.status(HttpStatus.OK).body(environment.getProperty("JAVA_HOME"));
+    }
+
+    public ResponseEntity<String>  getJavaVersionFallBack(Throwable throwable){
+        return ResponseEntity.status(HttpStatus.OK).body("Java 17");
     }
 
     @Operation(summary = "Get contact info of Account MS ")

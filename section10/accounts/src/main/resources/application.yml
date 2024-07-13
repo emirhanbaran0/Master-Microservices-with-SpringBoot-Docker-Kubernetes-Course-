@@ -82,3 +82,25 @@ resilience4j.circuitbreaker:
       wait-duration-in-open-state:
         nanos: 10000
 
+resilience4j.retry:
+  configs:
+    default:
+      max-attempts: 3
+      wait-duration:
+        nanos: 100
+      enable-exponential-backoff: true
+      exponential-backoff-multiplier: 2
+      ignore-exceptions:
+        - java.lang.NullPointerException
+      #retry-exceptions:
+      #  - java.util.concurrent.TimeoutException
+
+resilience4j.ratelimiter:
+  configs:
+    default:
+      timeout-duration:
+        nanos: 1000
+      limit-refresh-period: 5000
+      limit-for-period: 1
+
+
