@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class LoansFallback {
+public class LoansFallback implements LoansFeignClient {
 
     public ResponseEntity<LoansDto> fetchLoanDetails(String correlationId, String mobileNumber) {
         return null;

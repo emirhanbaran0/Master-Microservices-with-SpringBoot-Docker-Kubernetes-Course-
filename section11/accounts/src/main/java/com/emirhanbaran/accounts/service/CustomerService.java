@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 import static com.emirhanbaran.accounts.mapper.CustomerMapper.mapToCustomerDetailsDto;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CustomerService {
 
     private final AccountRepository accountRepository;
