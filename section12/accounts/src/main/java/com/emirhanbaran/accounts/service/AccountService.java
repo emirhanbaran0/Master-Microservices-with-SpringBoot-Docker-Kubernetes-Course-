@@ -2,6 +2,7 @@ package com.emirhanbaran.accounts.service;
 
 import com.emirhanbaran.accounts.constants.AccountConstants;
 import com.emirhanbaran.accounts.dto.AccountsDto;
+import com.emirhanbaran.accounts.dto.AccountsMsgDto;
 import com.emirhanbaran.accounts.dto.CustomerDto;
 import com.emirhanbaran.accounts.entity.Account;
 import com.emirhanbaran.accounts.entity.Customer;
@@ -12,6 +13,9 @@ import com.emirhanbaran.accounts.mapper.CustomerMapper;
 import com.emirhanbaran.accounts.repository.AccountRepository;
 import com.emirhanbaran.accounts.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -23,6 +27,9 @@ public class AccountService {
 
     private final AccountRepository accountRepository;
     private final CustomerRepository customerRepository;
+    private final StreamBridge streamBridge;
+
+    private static final Logger logger= LoggerFactory.getLogger(AccountService.class);
 
     /**
      *
@@ -35,7 +42,16 @@ public class AccountService {
         }
 
         Customer savedCustomer=customerRepository.save(customer);
-        accountRepository.save(createNewAccount(savedCustomer));
+        Account savedAccount=accountRepository.save(createNewAccount(savedCustomer));
+        sendCommunication(savedAccount,savedCustomer);
+    }
+
+    public void sendCommunication (Account account,Customer customer){
+         var accountsMsgDto=new AccountsMsgDto(account.getAccountNumber(),
+                customer.getName(),customer.getEmail(),customer.getMobileNumber());
+        logger.info("Sending communication request for the details: {}",accountsMsgDto);
+        var result=streamBridge.send("sendCommunication-out-0",accountsMsgDto);
+        logger.info("Is the Communication request successfully processed: {}",result);
     }
 
     private Account createNewAccount(Customer customer){
