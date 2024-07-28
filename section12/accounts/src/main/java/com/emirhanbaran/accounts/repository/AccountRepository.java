@@ -13,4 +13,5 @@ public interface AccountRepository extends JpaRepository<Account,Long> {
     @Modifying //this annotation let Spring know that this method modifying the data
     @Transactional
     void deleteByCustomerId(Long customerId);
+
 }
