@@ -97,7 +97,7 @@
 				<version>3.4.2</version>
 				<configuration>
 					<to>
-						<image>emirhanbaran/${project.artifactId}:s11</image>
+						<image>emirhanbaran/${project.artifactId}:s12</image>
 					</to>
 				</configuration>
 			</plugin>
