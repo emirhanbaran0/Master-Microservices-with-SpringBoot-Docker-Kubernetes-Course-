@@ -1,0 +1,12 @@
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to EazyBank loans related prod APIs"
+  contact-details:
+    name: "John Doe- Prod Lead"
+    email: "john2322@gmail.com"
+  on-call-support:
+    - 05144305121
+    - 2132412411123
