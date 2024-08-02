@@ -39,7 +39,7 @@ services:
       file: common-config.yml
       service: network-deploy-service
   configserver:
-    image: "emirhanbaran/configserver:s12"
+    image: "emirhanbaran/configserver:s13"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -54,7 +54,7 @@ services:
       service: microservice-base-config
 
   eurekaserver:
-    image: "emirhanbaran/eurekaserver:s12"
+    image: "emirhanbaran/eurekaserver:s13"
     container_name: eurekaserver-ms
     ports:
       - "8070:8070"
@@ -71,7 +71,7 @@ services:
       SPRING_APPLICATION_NAME: "eurekaserver"
 
   accounts:
-    image: "emirhanbaran/accounts:s12"
+    image: "emirhanbaran/accounts:s13"
     container_name: accounts-ms
     healthcheck:
       test: "curl --fail --silent localhost:8080/actuator/health/readiness | grep UP || exit 1"
@@ -92,7 +92,7 @@ services:
       service: microservice-eureka-config
 
   message:
-    image: "emirhanbaran/message:s12"
+    image: "emirhanbaran/message:s13"
     container_name: message-ms
     depends_on:
       rabbit:
@@ -104,7 +104,7 @@ services:
       service: network-deploy-service
 
   loans:
-    image: "emirhanbaran/loans:s12"
+    image: "emirhanbaran/loans:s13"
     container_name: loans-ms
     healthcheck:
       test: "curl --fail --silent localhost:8090/actuator/health/readiness | grep UP || exit 1"
@@ -122,7 +122,7 @@ services:
       service: microservice-eureka-config
 
   cards:
-    image: "emirhanbaran/cards:s12"
+    image: "emirhanbaran/cards:s13"
     container_name: cards-ms
     healthcheck:
       test: "curl --fail --silent localhost:9000/actuator/health/readiness | grep UP || exit 1"
@@ -140,7 +140,7 @@ services:
       service: microservice-eureka-config
 
   gatewayserver:
-    image: "emirhanbaran/gatewayserver:s12"
+    image: "emirhanbaran/gatewayserver:s13"
     container_name: gatewayserver-ms
     ports:
       - "8072:8072"
