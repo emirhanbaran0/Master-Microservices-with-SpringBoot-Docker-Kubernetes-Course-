@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: loans
-        image: emirhanbaran/loans:s13
+        image: emirhanbaran/loans:s11
         ports:
         - containerPort: 8090
         env:

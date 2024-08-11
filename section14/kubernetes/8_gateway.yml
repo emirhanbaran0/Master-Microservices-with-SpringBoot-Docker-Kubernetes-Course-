@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: gatewayserver
-        image: emirhanbaran/gatewayserver:s13
+        image: emirhanbaran/gatewayserver:s11
         ports:
         - containerPort: 8072
         env:

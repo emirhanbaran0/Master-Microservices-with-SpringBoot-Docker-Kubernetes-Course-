@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: cards
-        image: emirhanbaran/cards:s13
+        image: emirhanbaran/cards:s11
         ports:
         - containerPort: 9000
         env:

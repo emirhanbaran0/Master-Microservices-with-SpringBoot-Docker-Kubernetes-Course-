@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: eurekaserver
-        image: emirhanbaran/eurekaserver:s13
+        image: emirhanbaran/eurekaserver:s11
         ports:
         - containerPort: 8070
         env:

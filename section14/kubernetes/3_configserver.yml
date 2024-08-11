@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: configserver
-        image: emirhanbaran/configserver:s13
+        image: emirhanbaran/configserver:s11
         ports:
         - containerPort: 8071
 ---
